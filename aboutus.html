@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>About</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="h.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="h.css" />
+    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css?family=Almendra')" />
+
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+</head>
+
+
+
+<body>
+    <div>
+        <nav>
+            <div class="nav_wrapper">
+                <a href="index.html" class="brand-logo" style="color:#F5A44B">Doggodopt</a>
+                <div class="options">
+                    <a href="index.html" accesskey="1" title="">Home</a>
+                    <a href="#" accesskey="3" title="">About</a>
+                    <a href="dogblog.html" accesskey="2" title="">Blog</a>
+                    <a href="events.html" accesskey="4" title="">Events </a>
+                    <a href="signup.html" accesskey="5" title="">Signup</a>
+    
+                </div>
+            </div>
+        </nav>
+    </div>
+  <script>
+  	$(document).ready(function () {
+  		$(window).scroll(function () {
+  			if ($(window).scrollTop > 100) {
+  				$('nav').addClass('pink')
+  			}
+  			else {
+  				$('nav').removeClass('pink')
+  			}
+  		})
+  	});
+  </script>
+  <div>.</div>
+  <br><br><br><br><br>
+  <div style="color: white;font-size: 50px;text-align: center;"><b>ABOUT</b></div>
+  <br><br><br>
+  <div class="yayy" align="center">
+
+    <!-- <img id="image1" src="abtus/d2.jpeg"> -->
+    <!-- <img id="image2" src="abtus/k1.jpg"> -->
+    <!-- <img id="image3" src="abtus/p6.jpg"> -->
+  <div class="rows">
+  <div class="columns">
+  </div>
+  <div class="columns" style="background-color:black">
+    <h5 style="color:white">Annapurna G Patil</h5>
+    <img id="image2" src="images/k5.jpg" style="height: 80%;width: 50%;">
+    <p></p>
+  </div>
+  <div class="columns" >
+  </div>
+</div>
+<br><br><br><br>
+</div>
+
+    <script>
+      var imageSources1 =["images/d5.jpeg","images/d2.jpeg","images/d3.jpeg","images/d4.jpeg","images/d1.jpeg"];
+      var imageSources2 =["images/k1.jpg","images/k2.jpg","images/k3.jpg","images/k4.jpg","images/k5.jpg"];
+      var imageSources3 =["images/p1.jpg","images/p2.jpg","images/p3.jpg","images/p4.jpg","images/p5.jpg","images/p6.jpg"];
+      var index1 = 0;
+      var index2 = 0;
+      var index3 = 0;
+setInterval (function(){
+  if (index1 === imageSources1.length) {
+    index1 = 0;
+  }
+  if (index2 === imageSources2.length) {
+    index2 = 0;
+  }
+  if (index3 === imageSources3.length) {
+    index3 = 0;
+  }
+  document.getElementById("image1").src = imageSources1[index1];
+  document.getElementById("image2").src = imageSources2[index2];
+  document.getElementById("image3").src = imageSources3[index3];
+  index1++;
+  index2++;
+  index3++;} , 3000);
+  </script>

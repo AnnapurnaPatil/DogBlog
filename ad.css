@@ -1,0 +1,115 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body, html {
+	height: 100%;
+	font-family: Trebuchet MS, sans-serif;
+}
+a:hover {
+	text-decoration: none;
+	color: #57b846;
+}
+input {
+	outline: none;
+	border: none;
+  color: black;
+}
+
+input::-webkit-input-placeholder { color: rgba(102,0,51,1);}
+.bg-contact3 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+p{
+  color: black;
+}
+.bg-contact3 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  /* background-size: cover; */
+}
+
+.container-contact3 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.2);
+}
+
+.wrap-contact3 {
+    width: 600px;
+    background: rgba(255,229,204,0.3);
+    border-radius: 30px;
+    border-color:white;
+    overflow: hidden;
+    padding: 72px 55px 65px 55px;
+  }
+
+  .contact3-form-title {
+    display: block;
+    font-family: Trebuchet MS;
+    font-size: 56px;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 70px;
+  }
+  .input3 {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Trebuchet MS;
+    font-size: 22px;
+    color: rgba(102,0,51,1);
+    line-height: 1.2;
+    padding: 0 5px;
+  }
+  .wrap-input3 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid rgba(255,255,255,0.44);
+    margin-bottom: 27px;
+  }
+
+  .but {
+      background-color: rgba(102,0,51,0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px
+  }
+  .but:hover {
+      background-color: rgba(255,128,0,0.8);
+      color: white;
+  }

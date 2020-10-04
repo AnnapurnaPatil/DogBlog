@@ -1,0 +1,149 @@
+<html>
+<head>
+  <title>Buy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="h.css" />
+    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css?family=Almendra')" />
+
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+
+</head>
+<body>
+  <nav background= "black">
+  	<div class="nav_wrapper">
+  		<a href="index.html" class="brand-logo" style="color: #F5A44B">Doggodopt</a>
+  		<!--			<ul class="right hide-on-med-and-down"  style="font-size: 20px">-->
+  		<div class="options">
+          <a href="index.html" accesskey="1" title="">Home</a>
+          <a href="aboutus.html" accesskey="3" title="">About</a>
+          <a href="dogblog.html" accesskey="2" title="">Blog</a>
+          <a href="events.html" accesskey="4" title="">Events </a>
+          <a href="signup.html" accesskey="5" title="">Signup</a>
+
+  		</div>
+  	</div>
+  </nav>
+  <script>
+  	$(document).ready(function () {
+  		$(window).scroll(function () {
+  			if ($(window).scrollTop > 100) {
+  				$('nav').addClass('pink')
+  			}
+  			else {
+  				$('nav').removeClass('pink')
+  			}
+  		})
+  	});
+  </script>
+  <div>.</div>
+  <br><br><br><br><br>
+  <div style="color: white;font-size: 50px;text-align: center;"><b>BUY A DOGGO</b></div>
+  <br><br><br>
+  <div class="row"> <!--class="row"-->
+      <div class="col s12"> 
+        <div class=" col s3 offset-s2 ">
+          <input id="breed" type="text" class="validate" placeholder="Breed">
+        </div>
+        <div class="col s3 offset-s2 ">
+          <input id="age" type="text" class="validate"  placeholder="Age">
+        </div> 
+        <div class=" col s3 offset-s2 ">
+          <input id="colour" type="text" class="validate"  placeholder="Colour">
+        </div>
+        <div class=" col s3 offset-s2 ">
+          <input id="gender" type="text" class="validate" placeholder="Gender">
+        </div>
+
+        <div class="col s8 offset-s2 center-align">
+          <br>
+          <button style="margin-bottom: 1rem;" class="btn waves-effect waves-light black" type="submit" name="action">Find doggie
+          </button>
+        </div>
+      </div>
+    </div>
+  <style>
+  .btn{background-color:black}
+  </style>
+</div>
+<br><br>
+<div class="cards">
+<div class="row" >
+	<div class="card" onclick="exp(0)">
+		<img src="images/2.jpg" alt="Avatar" style="width:100%">
+		<div class="container">
+			<h4><b>Rani</b></h4>
+			<h5>Indie</h5>
+      <h5>Female</h5>
+      <h5>5 years old</h5>
+      <p>Loves to play and cuddle.Loves the outdoors as much as she loves indoors</p>
+    <div id="Contact" class="hide" >
+      <h6>Ramesh:</h6>
+      <h6>Ph: 9999999999 </h6>
+      <h6>Em: ram123@gmail.com</h6>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="card" onclick="exp(1)">
+  		<img src="images/3.jpg" alt="Avatar" style="width:100%">
+  		<div class="container">
+  			<h4><b>Gunda</b></h4>
+  			<h5>Indie</h5>
+        <h5>Male</h5>
+        <h5>5 years old</h5>
+        <p>Loves to play and cuddle.Loves the outdoors as much as she loves indoors</p>
+      <div id="Contact" class="hide" >
+        <h6>Preeti:</h6>
+        <h6>Ph: 9999779999 </h6>
+        <h6>Em: pr123@gmail.com</h6>
+  		</div>
+      </div>
+  	</div>
+    <div class="row">
+    	<div class="card" onclick="exp(2)">
+    		<img src="images/1.jpg" alt="Avatar" style="width:100%">
+    		<div class="container">
+    			<h4><b>Macy</b></h4>
+    			<h5>Indie</h5>
+          <h5>Female</h5>
+          <h5>5 years old</h5>
+          <p>Loves to play and cuddle.Loves the outdoors as much as she loves indoors</p>
+        <div id="Contact" class="hide" >
+          <h6>Ramesh:</h6>
+          <h6>Ph: 9999999999 </h6>
+          <h6>Em: ram123@gmail.com</h6>
+        </div>
+  		</div>
+    	</div>
+      <div class="row">
+      	<div class="card" onclick="exp(3)">
+      		<img src="images/4.jpg" alt="Avatar" style="width:100%">
+      		<div class="container">
+      			<h4><b>Macy</b></h4>
+      			<h5>Indie</h5>
+            <h5>Female</h5>
+            <h5>5 years old</h5>
+            <p>Loves to play and cuddle.Loves the outdoors as much as she loves indoors</p>
+          <div id="Contact" class="hide" >
+            <h6>Ramesh:</h6>
+            <h6>Ph: 9999999999 </h6>
+            <h6>Em: ram123@gmail.com</h6>
+          </div>
+      		</div>
+      	</div>
+</div>
+<script src="h.js"></script>
+</body>
+</html>

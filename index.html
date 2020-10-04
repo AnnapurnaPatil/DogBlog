@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Doggodopt</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+
+	<link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css?family=Almendra')" />
+
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+
+</head>
+
+<style>
+	nav {
+		position: fixed;
+		/* background: rgb(238, 159, 130, 0.4); */
+		background: rgba(0, 0, 0, 0.2);
+		padding: 0px 20px;
+		overflow: hidden;
+	}
+
+	.card_container {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+		transition: 0.3s;
+		width: 25%;
+		margin: 3%;
+		perspective: 1000;
+
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.container {
+		padding: 2px 16px;
+		color: black;
+
+	}
+
+	.row {
+		margin-left: 3%;
+	}
+
+	.row .card {
+		float: left;
+		/* width: 33.33%; */
+		/* padding: 5px; */
+
+		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+		transition: 0.3s;
+		/* width: 20%; */
+		width: 15%;
+
+		/* max-height: 360px;
+		min-height: 360px;  */
+
+		margin-right: 1%;
+		position: relative;
+		/*		background:  #8E744D;*/
+		background: url("images/wood-wallpaper.png");
+	}
+
+	/* Clearfix (clear floats) */
+	.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 1;
+		/* Sit on top */
+		padding-top: 100px;
+		/* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%;
+		/* Full width */
+		height: 100%;
+		/* Full height */
+		overflow: auto;
+		/* Enable scroll if needed */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4);
+		/* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+		background: url("images/wood-wallpaper.png");
+		color: black;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid black;
+		width: 50%;
+		height: 70%;
+	}
+
+	/* The Close Button */
+	.close_bs {
+		color: black;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close_bs:hover,
+	.close_bs:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.close_ap {
+		color: black;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close_ap:hover,
+	.close_ap:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.modal_btn {
+		display: inline-block;
+		padding: 15px 25px;
+		font-size: 24px;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		outline: none;
+		color: #fff;
+		background-color: black;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 9px #666;
+	}
+
+	.modal_btn:hover {
+		background-color: #A32628;
+	}
+
+	.modal_btn:active {
+		background-color: #d14456;
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
+
+	
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 4px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+  }
+  to {
+    text-shadow: 0 0 px #fff, 0 0 30px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
+  }
+}
+</style>
+
+<nav>
+	<div class="nav_wrapper">
+		<a href="#" class="brand-logo">Doggodopt</a>
+		<!--			<ul class="right hide-on-med-and-down"  style="font-size: 20px">-->
+		<div class="options">
+			<a href="signup.html" accesskey="5" title="">Signup</a>
+			<a href="#" accesskey="4" title="">Events</a>
+			<a href="dogblog.html" accesskey="2" title="">Blog</a>
+			<a href="aboutus.html" accesskey="3" title="">About</a>
+			<a href="#" class="active" accesskey="1" title="">Home</a>
+
+		</div>
+	</div>
+</nav>
+<!--	<div id="header-featured"> </div>-->
+
+<div id="header-featured">
+	<div class="buttons">
+		<button class="sell" id='bs'>Buy / Sell</button>
+		<div id="modal_bs" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+
+				<span class="close_bs">&times;</span>
+				<div style="color: black; font-size: 40px;text-align: center;"><b>WHAT WOULD YOU LIKE DO DO?</b></div>
+
+				<a href='buy.html'><button class="modal_btn" style="margin:10%">BUY A DOG</button></a>
+				<a href='sell.html'><button class="modal_btn" style="margin:10%">SELL A DOG</button></a>
+
+			</div>
+
+		</div>
+		<button class="adopt" id='ap'>Adopt / Put up for adoption</button>
+		<div id="modal_ap" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+
+				<span class="close_ap">&times;</span>
+				<div style="color: black; font-size: 40px;text-align: center;"><b>WHAT WOULD YOU LIKE DO DO?</b></div>
+
+				<a href='srch_adopt.html'><button class="modal_btn" style="margin:4%; margin-top: 12%">ADOPT A DOG</button></a>
+				<a href='upload_adopt.html'><button class="modal_btn" style="margin:4%;margin-top: 12%">PUT UP FOR ADOPTION</button></a>
+			</div>
+
+		</div>
+		<a href='dog_services.html'><button class="service">Dog services</button></a>
+	</div>
+	<!--
+		<section class="caption">
+			<p class="cap_title">Excepteur occaecat cupidatat</p>
+			<p class="cap_desc">duis aute irure reprehenderit</p>
+		</section>
+-->
+</div>
+
+
+<script>
+	// Get the modal
+	var modal_bs = document.getElementById('modal_bs');
+	var modal_ap = document.getElementById('modal_ap');
+
+	// Get the button that opens the modal
+	var bs = document.getElementById("bs");
+	var ap = document.getElementById("ap");
+
+
+	// Get the <span> element that closes the modal
+	var span_bs = document.getElementsByClassName("close_bs")[0];
+	var span_ap = document.getElementsByClassName("close_ap")[0];
+
+
+	// When the user clicks the button, open the modal 
+	bs.onclick = function () {
+		modal_bs.style.display = "block";
+	}
+	ap.onclick = function () {
+		modal_ap.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span_bs.onclick = function () {
+		modal_bs.style.display = "none";
+	}
+	span_ap.onclick = function () {
+		modal_ap.style.display = "none";
+	}
+</script>
+
+<div class="glow">
+	<!-- <img src="images/urgent.png" height=30% width=30%> -->
+	URGENT!
+
+</div>
+
+<div class="row">
+	<div class="card">
+		<img src="images/1.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Blood needed!</b></h4>
+			<h5>Timmy, Male, 2years, B+</h5>
+		</div>
+	</div>
+
+	<div class="card">
+		<img src="images/3.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Urgently adopt please!</b></h4>
+			<h5>Bobby,Male, 5 years, vaccinated</h5>
+		</div>
+	</div>
+
+	<div class="card">
+		<img src="images/4.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Kidney needed!</b></h4>
+			<h5>Bella,Female, 9 years, B+</h5>
+		</div>
+	</div>
+
+	<div class="card">
+		<img src="images/5.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Blood needed!</b></h4>
+			<h5>Bobby,Male, 5 years, B+</h5>
+		</div>
+	</div>
+
+	<div class="card">
+		<img src="images/6.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Kidney transplant donor required!</b></h4>
+			<h5>Rufus,Male, 10 years, A+</h5>
+		</div>
+	</div>
+
+	<div class="card">
+		<img src="images/7.jpg" alt="Avatar" style="width:100%" class="urgent">
+		<div class="container">
+			<h4><b>Blood needed!</b></h4>
+			<h5>Bobita,Male, 5 years, B+</h5>
+		</div>
+	</div>
+
+
+</div>
+<!-- end of row -->
+
+
+<div id="extra" class="container">
+	<h2>Dogs are god's gifts. Treat them with kindness.</h2>
+	<span>Opt to adopt @ Doggodopt.com</span>
+	<!-- <p>This is <strong>dpk</strong>, wkakakakaaaakakkaka <a href="http://templated.co" rel="nofollow">TEDDIE</a>.
+		lolololol<a href="http://fotogrph.com/"> nininininin</a>. link<a href="http://templated.co/license">opopopo</a> yay
+	</p> -->
+
+	<a href="#" class="button">GO TO TOP</a>
+</div>
+
+
+<div id="copyright" class="container">
+	<p>&copy; Doggodopt. All rights reserved. | Photos by <a href="http://fotogrph.com/">google</a> | Design by <a href="http://templated.co"
+		 rel="nofollow">Dpk|Prags|Kadds</a>.</p>
+</div>
+
+</html>

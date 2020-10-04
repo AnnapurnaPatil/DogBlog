@@ -1,0 +1,185 @@
+<html>
+<head>
+  <title>Upload</title>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/CSS" href="ad.css">
+</head>
+<body>
+  	<div class="bg-contact3" style="background-image: url('images/dog6.jpg');background-attachment:fixed;">
+      <div class="container-contact3">
+  			<div class="wrap-contact3">
+  				<div class="contact3-form validate-form">
+  					<span class="contact3-form-title">
+  						Upload
+            </span>
+            <form action="upload_adopt.php" method="post">
+            <div class="wrap-input3">
+  						<input class="input3" type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <br>
+            <div class="wrap-input3">
+  						<input class="input3" type="text" name="dname" placeholder="Dog's Name">
+  					</div>
+            <br>
+            <div class="wrap-input3">
+  						<input class="input3" type="email" name="email" placeholder="Your Email" required>
+  					</div>
+            <br>
+            <div class="wrap-input3">
+  						<input class="input3" type="date" name="dbday" placeholder="Dog's date of birth approx" required>
+  					</div>
+            <br>
+            <div class="wrap-input3">
+  						<input class="input3" list="breed" placeholder="Breed" name="breed" required>
+              <datalist id="breed">
+                <option value="" data-icon="images/l.jpg" class="left">example 1</option>
+                <option value="Indie" data-icon="images/l.jpg"></option>
+                <option value="Labrador"></option>
+                <option value="Beagle"></option>
+                <option value="Retriever"></option>
+                <option value="Chihuahua"></option>
+                <option value="German Shepard"></option>
+                <option value="Husky"></option>
+                <option value="Daschund"></option>
+                <option value="Cocker Spaniel"></option>
+                <option value="Bull Dog"></option>
+                <option value="Dalmatian"></option>
+                <option value="Doberman"></option>
+                <option value="Great Dane"></option>
+                <option value="Pomeranian"></option>
+                <option value="Pug"></option>
+                <option value="Shitzu"></option>
+                <option value="Rottweiler"></option>
+                <option value="Saint Bernard"></option>
+                <option value="Other/Don't know"></option></select>
+  					</div>
+            <br>
+            <div class="wrap-input3">
+  						<input class="input3" type="text" placeholder="Colour" name="colour">
+  					</div>
+            <p>Gender:<br>
+                <input class="input-radio3" id="radio1" type="radio" name="gender" checked="checked">
+                <label class="label-radio3" for="radio1">
+                  Male
+                </label></input>
+                  <input class="input-radio3" id="radio1" type="radio" name="gender">
+                  <label class="label-radio3" for="radio1">
+                    Female
+                  </label></input>
+                <br>
+                <br>
+                <p>Special Needs:<br>
+                    <input class="input-radio3" id="radio1" type="radio" name="need" checked="checked">
+                    <label class="label-radio3" for="radio1">
+                      Yes
+                    </label></input>
+                      <input class="input-radio3" id="radio1" type="radio" name="need">
+                      <label class="label-radio3" for="radio1">
+                        No
+                      </label></input>
+                    <br>
+                    <br>
+                </p>
+                <br><br>
+                <p>Dog's Location:</p>
+                <div class="wrap-input3">
+      						<input class="input3" type="text" list="state" name="state" placeholder="State" required>
+                  <datalist id="state">
+                  <option value="Select">Select</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jammu and Kashmir</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                  <option>Andaman and Nicobar Islands</option>
+                  <option>Chandigarh</option>
+                  <option>Dadar and Nagar Haveli</option>
+                  <option>Daman and Diu</option>
+                  <option>Delhi</option>
+                  <option>Lakshadweeep</option>
+                  <option>Puducherry</option>
+                </datalist></input></div>
+                <div class="wrap-input3">
+                  <input class="input3" list="city" name="city" placeholder="City" required>
+                  <datalist id="city">
+                  <option value="Select">Select</option>
+                  <option>Hyderabad</option>
+                  <option>Itanagar</option>
+                  <option>Dispur</option>
+                  <option>Patna</option>
+                  <option>Raipur</option>
+                  <option>Panaji</option>
+                  <option>Gandhinagar</option>
+                  <option>Chandigarh</option>
+                  <option>Shimla</option>
+                  <option>Srinagar</option>
+                  <option>Ranchi</option>
+                  <option>Bengaluru</option>
+                  <option>Trivandrum</option>
+                  <option>Bhopal</option>
+                  <option>Mumbai</option>
+                  <option>Imphal</option>
+                  <option>Shillong</option>
+                  <option>Aizawl</option>
+                  <option>Kohima</option>
+                  <option>Bhubaneswar</option>
+                  <option>Chandigarh</option>
+                  <option>Jaipur</option>
+                  <option>Gangtok</option>
+                  <option>Chennai</option>
+                  <option>Hyderabad</option>
+                  <option>Agartala</option>
+                  <option>Lucknow</option>
+                  <option>Dehradun</option>
+                  <option>Kolkata</option>
+                  <option>Port Blair</option>
+                  <option>Chandigarh</option>
+                  <option>Silvassa</option>
+                  <option>Daman</option>
+                  <option>Delhi</option>
+                  <option>Kavaratti</option>
+                  <option>Pondicherry</option>
+                </datalist></input>
+                </div>
+            <br><br>
+            <p>Photo:</p><br><input class="but" type="file" name="photo" required><br>
+            <br><br>
+            <p>Video(optional):</p><br><input class="but" type="file" name="video" placeholder="Choose Video"><br>
+            <br><br>
+            <div class="wrap-input3">
+            <p>Comments:</p><br>
+  						<input class="input3" type="textarea" placeholder="" name="cmmt"/>
+  					</div>
+            <br>
+            <br>
+            <input type="submit" class="but" name="submit"/>
+            <!-- <input type="reset" class="but" name="reset"> -->
+            <br>
+          </form>
+</body>
+</html>

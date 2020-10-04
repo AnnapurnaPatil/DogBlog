@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<!--<link rel="stylesheet" href="@import url('')";-->
+<link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500')" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+<style>
+  *:focus {
+  outline: none;
+}
+.error {
+  color: #FF0000;
+}
+body {
+  background: url(images/signup_background.jpg)no-repeat;
+	background-size:110% 130%;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 10% auto;
+  width: 600px;
+  height: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 38px rgba(0, 0, 0, 1);
+}
+
+.left {
+  position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display: block;
+  /* box-sizing: border-box; */
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  /* border-bottom: 5px solid black; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  /* border-bottom: 2px solid black; */
+  color: black;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 1px;
+	margin-left: 40px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url("images/wood-wallpaper.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  /* margin-top:10px; */
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+
+button.social-signin.existing_user {
+  background:#16a085;
+  }
+	
+nav {
+		position: fixed;
+		/* background: rgb(238, 159, 130, 0.4); */
+		background: rgba(0, 0, 0, 0.2);
+		padding: 0px 20px;
+		overflow: hidden;
+	}
+	
+.brand-logo{
+		font-weight: 400;
+	}
+	
+	.options a:hover{
+		background-color: #A32628;
+  		
+	}
+	
+	.options a.active{
+		background-color: #4CAF50;
+  		color: white;
+	}
+	
+.options a{
+		float: right;
+		font-size: 20px;
+		font-weight: 400;
+/*		text-align: center;*/
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+/*		text-decoration: none;*/
+		
+  }
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background: url("images/wood-wallpaper.png");
+    /* background-color: #fefefe; */
+    color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color:black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+color:black;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+  color:black;
+
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+  color:black ;
+ 
+}
+ 
+input:-ms-input-placeholder {  
+  color:black ;
+
+}
+
+</style>
+
+
+<div>
+  <nav>
+    <div class="nav_wrapper">
+      <a href="index.html" class="brand-logo" style="color: #F5A44B">Doggodopt</a>
+      <!--			<ul class="right hide-on-med-and-down"  style="font-size: 20px">-->
+      <div class="options">
+        <a href="signup.html" accesskey="5" title="" class="active">Signup</a>
+        <a href="events.html" accesskey="4" title="">Events</a>
+        <a href="blog.html" accesskey="2" title="">Blog</a>
+        <a href="aboutus.html" accesskey="3" title="">About</a>
+        <a href="index.html" accesskey="1" title="">Home</a>
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<div>.</div>
+
+<div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    <form method="post" action="signup.php" onsubmit="return check()">
+      <input type="text" id="signinName" name="uname" placeholder="Username" required />
+      <input type="email" id="signinEmail" name="email" placeholder="E-mail" required />
+      <input type="password" id="pwd" name="pwd" placeholder="Password" onkeyup='check();'  required />
+      <input type="password" id="confirm_pwd" name="pwd2" placeholder="Confirm password" onkeyup='check();'  required />
+
+      <input type="submit" value="submit" onclick="chk()" />
+      <!-- name="signup_submit -->
+
+    </form>
+  </div>
+
+  <div class="right">
+    <div style="color:black; display: flex; justify-content: center"><b>Already have an account?</b></div>
+    <br>
+    <button class="social-signin existing_user" id="login_btn">Login as existing user</button>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4><b>HEY THERE! WELCOME BACK!</b></h4>
+        <form action="login.php" method="post">
+          <input type="text" name="uname" placeholder="Username" required />
+          <input type="password" name="pwd" placeholder="Password" required />
+          <input type="submit" value="submit" />
+          <!-- onclick="check()" -->
+        </form>
+      </div>
+
+    </div>
+    <!-- SIGNING IN WITH SOCIAL NETWORK IS NOT FUNCTIONAL YET. -->
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+    <span class="loginwith"><b>Sign in with a<br />social network</b></span>
+  </div>
+  <div class="or">OR</div>
+</div>
+
+<script>
+
+
+  var check = function() {
+
+    var pass1 = document.getElementById("pwd").value;
+    var pass2 = document.getElementById("confirm_pwd").value;
+    var ok = true;
+    if (pass1 != pass2) {
+        //alert("Passwords Do not match");
+        document.getElementById("pwd").style.borderColor = "#E34234";
+        document.getElementById("confirm_pwd").style.borderColor = "#E34234";
+        ok = false;
+        // alert("Passwords dont Match!!!");
+    }
+    else {
+        ok=true;
+    }
+    return ok;
+}
+
+function chk(){
+  if(check()==false){
+    alert("Passwords Do not match!");
+  }
+}
+
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById('login_btn');
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+//
+
+</script>
+
+</html>

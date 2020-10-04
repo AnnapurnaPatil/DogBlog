@@ -1,0 +1,140 @@
+<html>
+<head>
+  <title>Adopt</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="h.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+
+</head>
+<body>
+  <nav background= "black">
+  	<div class="nav_wrapper">
+  		<a href="#" class="brand-logo">Doggodopt</a>
+  		<!--			<ul class="right hide-on-med-and-down"  style="font-size: 20px">-->
+  		<div class="options">
+  			<a href="file:///Z:/Dpk/PROJECTS/breadth_2526/signup.html" accesskey="5" title="">Signup</a>
+  			<a href="#" accesskey="4" title="">Events </a>
+  			<a href="#" accesskey="2" title="">Blog</a>
+  			<a href="#" accesskey="3" title="">About</a>
+  			<a href="#" class="active" accesskey="1" title="">Home</a>
+
+  		</div>
+  	</div>
+  </nav>
+  <script>
+  	$(document).ready(function () {
+  		$(window).scroll(function () {
+  			if ($(window).scrollTop > 100) {
+  				$('nav').addClass('pink')
+  			}
+  			else {
+  				$('nav').removeClass('pink')
+  			}
+  		})
+  	});
+  </script>
+  <br><br>
+  <h1 align="center" style="font-size:15vw"> BUY </h1>
+  <!-- <div class="filter"> -->
+  <!-- <class="btn"> Show all </button> -->
+  <div class="row">
+      <div class="col s12">
+        <div class="input-field col s5 offset-s1 black">
+          <input id="breed" type="text" class="validate" placeholder="Breed">
+        </div>
+        <div class="input-field col s5 offset-s1 black">
+          <input id="age" type="text" class="validate"  placeholder="Age">
+        </div>
+        <div class="input-field col s5 offset-s1 black">
+          <input id="colour" type="text" class="validate"  placeholder="Colour">
+        </div>
+        <div class="input-field col s5 offset-s1 black">
+          <input id="gender" type="text" class="validate" placeholder="Gender">
+        </div>
+        <div class="col s8 offset-s2 center-align">
+          <button style="margin-bottom: 1rem;" class="btn waves-effect waves-light black" type="submit" name="action">Find doggie
+          </button>
+        </div>
+      </div>
+    </div>
+  <style>
+  .btn{background-color:black}
+  </style>
+</div>
+<br><br><br><br><br>
+<div class="cards">
+<div class="row" >
+	<div class="card" onclick="exp(0)">
+		<img src="dog2.jpg" alt="Avatar" style="width:100%">
+		<div class="container">
+			<h4><b>Lucy</b></h4>
+			<h5>Indie</h5>
+      <h5>Female</h5>
+      <h5>4 years old</h5>
+	<h5>Rs 1000</h2>
+      <p>Is extremely affectionate</p>
+    <div id="Contact" class="hide" >
+      <h6>Ram:</h6>
+      <h6>Ph: 9999999999 </h6>
+      <h6>Em: ram12453@gmail.com</h6>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="card" onclick="exp(1)">
+  		<img src="3.jpg" alt="Avatar" style="width:100%">
+  		<div class="container">
+  			<h4><b>Max</b></h4>
+  			<h5>Indie</h5>
+        <h5>Male</h5>
+        <h5>2 years old</h5>
+	<h5>Rs 700</h5>
+        <p>Loves to play and cuddle.</p>
+      <div id="Contact" class="hide" >
+        <h6>Preeti:</h6>
+        <h6>Ph: 9999779999 </h6>
+        <h6>Em: pr123@gmail.com</h6>
+  		</div>
+      </div>
+  	</div>
+    <div class="row">
+    	<div class="card" onclick="exp(2)">
+    		<img src="dog4.jpg" alt="Avatar" style="width:100%">
+    		<div class="container">
+    			<h4><b>Macy</b></h4>
+    			<h5>Indie</h5>
+          <h5>Female</h5>
+          <h5>5 years old</h5>
+	<h5>Rs 1200</h5>
+          <p>Loves to play and is very active</p>
+        <div id="Contact" class="hide" >
+          <h6>Ramesh:</h6>
+          <h6>Ph: 9999999999 </h6>
+          <h6>Em: ram123@gmail.com</h6>
+        </div>
+  		</div>
+    	</div>
+      <div class="row">
+      	<div class="card" onclick="exp(3)">
+      		<img src="dog5.jpg" alt="Avatar" style="width:100%">
+      		<div class="container">
+      			<h4><b>Maggie</b></h4>
+      			<h5>Indie</h5>
+            <h5>Female</h5>
+            <h5>3 years old</h5>
+            <h5>Rs 1500</h5>
+            <p>Loves the outdoors as much as she loves indoors</p>
+          <div id="Contact" class="hide" >
+            <h6>Ram:</h6>
+            <h6>Ph: 9999888889 </h6>
+            <h6>Em: ram1234@gmail.com</h6>
+          </div>
+      		</div>
+      	</div>
+</div>
+<script src="h.js"></script>
+</body>
+</html>

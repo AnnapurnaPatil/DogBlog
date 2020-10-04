@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rehoming your dog</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+.tab{
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    min-width: 300px;
+    padding: 16px;
+    background-color: white;
+
+
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    align:center;
+background-image: url("images/dog21.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+min-height: 900px;
+    
+}
+
+#Home {background-color: orange;}
+#AboutYou {background-color: #bea87f;}
+#AboutYourDog {background-color: orange;}
+#MoreAboutYourDog{background-color: orange;}
+</style>
+</head>
+
+<body>
+
+    <button class="tablink" onclick="openPage('Home', this, 'grey')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('AboutYou', this, 'grey')">AboutYou</button>
+    <button class="tablink" onclick="openPage('AboutYourDog', this, 'grey')">AboutYourDog</button>
+    <button class="tablink" onclick="openPage('MoreAboutYourDog', this, 'grey')">MoreAboutYourDog</button>
+
+    <div id="Home" class="tabcontent">
+        <h1 style="color: bisque;">REHOME YOUR DOG!</h1>
+        <br>
+        <div style="font-size:23px;font-style: italic;">
+            Are you looking for the right home to sell your dog to?<br><br>If
+            so,you're in the right place!<br>
+            We are here to help you safely find a loving forever home for your dog.<br>
+            All you need to do is to set up your dog's profile in less than 10 mins.<br>
+            Once complete, your pet's profile will be posted on doggodopt.com and<br>
+            it will be seen by millions of visitors each month!
+        </div><br><br>
+    </div>
+    <form action="sell.php" method="post">
+        <div id="AboutYou" class="tabcontent">
+            <div id="AboutYou" class="tab">
+                <h1>Personal Info</h1><br>
+
+                <h2>Name: <input type='text' name='uname'></h2>
+                <h2>Phone Number: <input type="tel" name="usrtel"></h2>
+                <h2>Email: <input type="email" name="email"></h2>
+                <br><br><br>
+
+            </div>
+        </div>
+
+
+        <div id="AboutYourDog" class="tabcontent">
+            <div id="AboutYou" class="tab">
+                <h1>Dog's Profile</h1><br>
+                Breed<br>
+                <input type='text' name='breed'> <br><br>
+                Gender<br>
+                <input type='radio' name="gender" value="male">Male
+                <input type='radio' name="gender" value="female">Female<br><br>
+                Age<br>
+                <input type='text' name='age'> <br><br>
+                Size<br>
+                <input type='text' name='size'> <br><br>
+                Colour<br>
+                <input type='text' name='colour'> <br><br>
+                Price<br>
+                <input type='number' name='price'> <br><br><br>
+                <h1>Dog's location</h1>
+                State<br>
+                <input type="text" list="state" name='state'>
+                <datalist id="state">
+                    <option value="Select">Select</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                    <option>Andaman and Nicobar Islands</option>
+                    <option>Chandigarh</option>
+                    <option>Dadar and Nagar Haveli</option>
+                    <option>Daman and Diu</option>
+                    <option>Delhi</option>
+                    <option>Lakshadweeep</option>
+                    <option>Puducherry</option>
+                </datalist>
+                <br><br>
+                City<br>
+                <input type="text" list="city" name="city">
+                <datalist id="city">
+                    <option value="Select">Select</option>
+                    <option>Hyderabad</option>
+                    <option>Itanagar</option>
+                    <option>Dispur</option>
+                    <option>Patna</option>
+                    <option>Raipur</option>
+                    <option>Panaji</option>
+                    <option>Gandhinagar</option>
+                    <option>Chandigarh</option>
+                    <option>Shimla</option>
+                    <option>Srinagar</option>
+                    <option>Ranchi</option>
+                    <option>Bengaluru</option>
+                    <option>Trivandrum</option>
+                    <option>Bhopal</option>
+                    <option>Mumbai</option>
+                    <option>Imphal</option>
+                    <option>Shillong</option>
+                    <option>Aizawl</option>
+                    <option>Kohima</option>
+                    <option>Bhubaneswar</option>
+                    <option>Chandigarh</option>
+                    <option>Jaipur</option>
+                    <option>Gangtok</option>
+                    <option>Chennai</option>
+                    <option>Hyderabad</option>
+                    <option>Agartala</option>
+                    <option>Lucknow</option>
+                    <option>Dehradun</option>
+                    <option>Kolkata</option>
+                    <option>Port Blair</option>
+                    <option>Chandigarh</option>
+                    <option>Silvassa</option>
+                    <option>Daman</option>
+                    <option>Delhi</option>
+                    <option>Kavaratti</option>
+                    <option>Pondicherry</option>
+                </datalist><br><br>
+            </div>
+        </div>
+        <div id="MoreAboutYourDog" class="tabcontent">
+            <div id="AboutYou" class="tab">
+                <h1>More About Your Dog</h1><br>
+                Shots up to date<br><br>
+                <input type="radio" name="shots" value="yes">Yes
+                <input type="radio" name="shots" value="no">No
+                <input type="radio" name="shots" value="unknown">Unknown<br><br>
+                House-trained<br><br>
+                <input type="radio" name="shots" value="yes">Yes
+                <input type="radio" name="shots" value="no">No
+                <input type="radio" name="shots" value="unknown">Unknown<br><br>
+                Has the dog been neutered/spayed?<br><br>
+                <input type="radio" name="shots" value="yes">Yes
+                <input type="radio" name="shots" value="no">No
+                <input type="radio" name="shots" value="unknown">Unknown<br><br>
+                Upload file:<br>
+                <input type="file" name="pic" accept="image/*">
+                <h2>Pet's story</h2><br>
+                <textarea rows="10" cols="50">
+                </textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+
+            </div>
+        </div>
+    </form>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>
